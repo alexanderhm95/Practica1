@@ -1,27 +1,88 @@
+.container{
 
-#caja_index{
-    width: 600px;
-    height: auto;
-    background: #555;
-    color:#fff;
-    top: 350px;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%,-50%);
-    box-sizing: border-box;
-    padding: 70px 30px;
-    border-radius: 15px;
-    border: 5px outset #292727;  /* Grosor del Borde */  /* Color del Borde */
-    text-shadow: -1px -1px #292727;
-    text-align: center;
-}
-.foto {
-    width: 200px;
-    height: 200px;
-    border-radius: 10%;
+ 
+width: 320px;
+background: #555;
+color:#fff;
+top:600px;
+left: 50%;
+position: absolute;
+transform: translate(-50%,-50%);
+box-sizing: border-box;
+padding: 70px 30px;
+border-radius: 15px;
+border: 5px outset #292727;  /* Grosor del Borde */  /* Color del Borde */
+text-shadow: -1px -1px #292727;
+    
     
 }
-.table{width: 500px;height: 200px;border-collapse:collapse;}
-.table-wrap{max-height: 450px;width:100%;overflow-y:auto;overflow-x:hidden;}
-.table-dalam{height:700px;width:500px;border-collapse:collapse;}
-.td-nya{border-left:1px solid white;border-right:1px solid grey;border-bottom:1px solid    grey;}
+
+  @media screen and (max-width: 600px) {
+    table {
+        width:100%;
+    }
+    thead {
+        display: none;
+    }
+    tr:nth-of-type(2n) {
+        background-color: inherit;
+    }
+    tr td:first-child {
+        background: #2e2c2c;
+        font-weight:bold;
+        font-size:1.3em;
+    }
+    tbody td {
+        display: block;
+        text-align:center;
+    }
+    tbody td:before {
+        content: attr(data-th);
+        display: block;
+        text-align:center;
+    }
+}
+
+ul.fotos{
+    display: inline;
+    color: aquamarine;
+    width: 970px;
+    margin: 25 10 0 10px;
+}
+ul.fotos li{
+    display: inline;
+}
+ul.fotos a{
+    display: inline;
+    float: left;
+    margin: 15px 15px 15px 15px;
+    text-align: center;
+    columns: #333333;
+    font-size: 10px;
+    box-shadow: 10px 3px 6px rgba(0,100,100,.25);
+    transform: rotate(2deg);
+}
+ul.fotos img{
+    display: block;
+    width: 250px;
+    height: 150px;
+    margin-bottom: 12px;
+}
+ul.fotos a::after{
+    content:attr(title);
+}
+ul.fotos li:nth-child(3n) a{
+    transform: none;
+    position: relative;
+    top: -5px;
+}
+ul.fotos li:nth-child(5n) a{
+    transform: rotate(-5deg);
+    position: relative;
+    top: -5px;
+}
+ul.fotos li a:hover{
+    transform: scale(1.25);
+    box-shadow: 0 3px 6px rgba(0,0,0,.5);
+    position: relative;
+}

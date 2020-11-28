@@ -1,0 +1,26 @@
+ul.fotos {
+    width: 970px;
+    margin: 0 0 18px -30px;
+ }
+ ul.fotos li {
+    display: inline;
+ }
+ ul.fotos a {
+    display: inline;
+    float: left;
+    margin: 0 0 27px 30px;
+    width: auto;
+    padding: 10px 10px 15px;
+    text-align: center;
+    color: #333;
+    font-size: 18px;
+ }
+ ul.fotos img {
+    display: block;
+    width: 190px;
+    margin-bottom: 12px;
+ }
+ ul.fotos a:after {
+    content: attr(title);
+ }
+ 
