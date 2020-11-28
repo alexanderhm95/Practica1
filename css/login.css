@@ -6,7 +6,7 @@ body{
     background: #b7dace;
     font-family: 'Poppins', sans-serif;
     background-size: cover;
-    height: 100vh;
+ 
   
 }
 
@@ -30,7 +30,7 @@ body{
     left: 30px;
 }
 nav{
-    background: transparent;
+ background-color: transparent;
 }
  
  
@@ -47,6 +47,9 @@ transform: translate(-50%,-50%);
 box-sizing: border-box;
 padding: 70px 30px;
 border-radius: 15px;
+border: 5px outset #292727;  /* Grosor del Borde */  /* Color del Borde */
+text-shadow: -1px -1px #292727;
+
 }
 #caja_master .icono{
 width: 200px;
@@ -102,5 +105,5 @@ right: 70px;
     text-decoration: none;
     font-size: 12px;
     line-height: 20px;
-    color: #555;
+    color: rgb(212, 212, 212);
 }
