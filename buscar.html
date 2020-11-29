@@ -20,6 +20,8 @@ utilizarla como estructura para la zona de resultados.-->
         <title>Animated Login Form</title>
         <link rel="stylesheet" type="text/css" href="css/login.css">
         <link rel="stylesheet" type="text/css" href="css/index.css">
+        
+        <link rel="stylesheet" type="text/css" href="css/buscar.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link
             href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap"
@@ -55,7 +57,7 @@ utilizarla como estructura para la zona de resultados.-->
                     <li class="nav-item"><a class="nav-link"
                             href="./buscar.html"><i class="fas fa-search">Buscar</i></a></li>
                     <li class="nav-item"><a class="nav-link"
-                            href="./nueva.html"><i class="fas fa-plus-square">Nueva
+                            href="./foto.html"><i class="fas fa-plus-square">Nueva
                                 Foto</i></a></li>
                     <li class="nav-item"><a class="nav-link"
                             href="./favoritas.html"><i class="far fa-bookmark">Favoritas</i></a></li>
@@ -82,8 +84,20 @@ utilizarla como estructura para la zona de resultados.-->
             </div>
         </header>
         <div id="caja_master2">
-             
-         <div class="container">
+
+           <div class="caja_busqueda" style="top:250px ">
+            <nav aria-label="breadcrumb">
+               <ol class="breadcrumb">
+                 <li class="breadcrumb-item active" aria-current="page"><i class="fas fa-search"></i></li>
+                 <li>
+                    <form  method="POST" href="#foto6"><input type="text"  size="125" style="border: 0;" placeholder="Ingrese el criterio de busqueda"></fomr></li>
+               </ol>
+             </nav>
+           </div>
+      
+    
+       
+         <div class="container" id="resultados" style="top: 800px;">
 
             <table width="600"  border-spacing="5px"  cellspacing="1">
               <tbody >
@@ -388,6 +402,7 @@ utilizarla como estructura para la zona de resultados.-->
               <a class="small" href="#">&copy; 2020-Todos los derechos reservados</a>
             </div>
           </footer>
+          <script src="node_modules/jquery/dist/jquery.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
             integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
             crossorigin="anonymous"></script>

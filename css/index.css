@@ -2,7 +2,7 @@
 width: 320px;
 background: #555;
 color:#fff;
-top:650px;
+top:700px;
 left: 50%;
 position: absolute;
 transform: translate(-50%,-50%);
@@ -11,6 +11,7 @@ padding: 70px 30px;
 border-radius: 15px;
 border: 5px outset #292727;  /* Grosor del Borde */  /* Color del Borde */
 text-shadow: -1px -1px #292727;
+
 }
 
   @media screen and (max-width: 600px) {

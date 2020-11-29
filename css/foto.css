@@ -1,0 +1,16 @@
+.cont_foto{
+    width: 700px;
+    height: auto;
+    background: #555;
+    color:#fff;
+    top:925px;
+    left: 50%;
+    position:relative;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 30px 30px;
+    border-radius: 15px;
+    border: 5px outset #292727;  /* Grosor del Borde */  /* Color del Borde */
+    text-shadow: -1px -1px #292727;
+    
+    }
