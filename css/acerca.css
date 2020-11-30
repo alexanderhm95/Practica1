@@ -1,0 +1,15 @@
+#caja_a{
+    width: 600px;
+    height: auto;
+    background: #555;
+    color:#fff;
+    top: 550px;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 10px 10px;
+    border-radius: 15px;
+    border: 5px outset #292727;  /* Grosor del Borde */  /* Color del Borde */
+    text-shadow: -1px -1px #292727;
+    }
