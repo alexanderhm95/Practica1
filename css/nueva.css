@@ -1,6 +1,6 @@
 #caja_form{
     width: 520px;
-    height: 480px;
+    height: auto;
     background: #555;
     color:#fff;
     top: 350px;
@@ -13,9 +13,39 @@
     border: 5px outset #292727;  /* Grosor del Borde */  /* Color del Borde */
     text-shadow: -1px -1px #292727;
     }
-#caja_form label{
-    margin: 0;
-    padding: 0;
-    font-weight: bold;
-    display: block;
-}
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  .button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+  }

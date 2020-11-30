@@ -6,13 +6,13 @@
     width:70%;
     flex-direction:row;
     box-shadow:
-     1px 1px 0 rgb(22, 160, 133),
-     2px 2px 0 rgb(22, 160, 133),
-     3px 3px 0 rgb(22, 160, 133),
-     4px 4px 0 rgb(22, 160, 133),
-     5px 5px 0 rgb(22, 160, 133),
-     6px 6px 0 rgb(22, 160, 133),
-     7px 7px 0 rgb(22, 160, 133)
+     1px 1px 0 rgb(33, 34, 34),
+     2px 2px 0 rgb(33, 34, 34),
+     3px 3px 0 rgb(33, 34, 34),
+     4px 4px 0 rgb(33, 34, 34),
+     5px 5px 0 rgb(33, 34, 34),
+     6px 6px 0 rgb(33, 34, 34),
+     7px 7px 0 rgb(33, 34, 34)
     ;
   }
   
@@ -25,27 +25,132 @@
   .field>input[type=text] {
     flex:1;
     padding:0.6em;
-    border:0.2em solid rgb(26, 188, 156);
+    border:0.2em solid rgb(80, 83, 83);
   }
   
   .field>button {
     padding:0.6em 0.8em;
-    background-color:rgb(26, 188, 156);
-    color:white;
+    background-color:rgb(13, 14, 13);
+    color:rgb(66, 64, 64);
     border:none;
   }
-  .caja_busqueda{
-    width: 1125px;
-   
-    
-    background: #555;
-    color:#fff;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%,-50%);
-    box-sizing: border-box;
-    padding: 10px 10px;
-    border-radius: 15px;
-    border: 5px outset #292727;  /* Grosor del Borde */  /* Color del Borde */
-    text-shadow: -1px -1px #292727;
+
+   .contain{
+      width: 75%;
+      height: auto;
+      background: #555;
+      color:#fff;
+      left: 50%;
+      margin-top: 450px;
+      position: absolute;
+      transform: translate(-50%,-50%);
+      box-sizing: border-box;
+      padding: 20px 20px;
+      border-radius: 15px;
+      border: 5px outset #292727;  /* Grosor del Borde */  /* Color del Borde */
+      text-shadow: -1px -1px #292727;
+
     }
+ 
+
+#resultados li{
+  display: inline;
+}
+#resultados .foto{
+  display: inline;
+  float: left;
+  columns: #333333;
+  box-shadow: 10px 3px 6px rgba(0,100,100,.25);
+  transform: rotate(2deg);
+}
+
+
+#resultados li:nth-child(3n) a{
+  transform: none;
+  position: relative;
+  top: -5px;
+}
+#resultados li:nth-child(5n) a{
+  transform: rotate(-5deg);
+  position: relative;
+  top: -5px;
+}
+#resultados li a:hover{
+  transform: scale(1.25);
+  box-shadow: 0 3px 6px rgba(0,0,0,.5);
+  position: relative;
+}
+.paginacion {
+margin:20px 0;
+}
+
+.paginacion ul {
+list-style:none;
+text-align: center;
+}
+
+.paginacion ul li {
+display:inline-block;
+margin-right:10px;
+}
+
+.paginacion ul li a {
+display:block;
+padding:10px 20px;
+color:#fff;
+background:#024959;
+text-decoration: none;
+}
+
+.paginacion ul li a:hover {
+background:#037E8C;
+}
+
+.paginacion ul li .active {
+background:#037E8C;
+font-weight:bold;
+}
+
+	
+
+h1,h2,i{
+  font-size: 2vw;
+}
+.responsive {
+  max-width: 100%;
+  height: auto;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  background: #555;
+  color:#fff;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color:#555;}
+			
+@media screen and (max-width: 480px){
+
+
+  .contain{
+    width: 50%;
+  }
+	#resultados{
+    width: 50%;
+    background-color: #fff;
+  }
+  .tb_m table{
+    width: 50%;
+    font-size: 50%;
+    
+  }
+	
+	}
+	
+

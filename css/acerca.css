@@ -1,9 +1,9 @@
 #caja_a{
-    width: 600px;
+    width: 650px;
     height: auto;
     background: #555;
     color:#fff;
-    top: 550px;
+    margin-top: 350px;
     left: 50%;
     position: absolute;
     transform: translate(-50%,-50%);
