@@ -1,383 +1,417 @@
-<!--
-Index.html. 
-Página principal del sitio.
-Debe aparecer información de las últimas 9 fotos mejor valoradas (con más votos positivos). Para cada foto se
-mostrará: el título, la foto, autor, número de votos positivos (Me gusta), número de
-veces marcada como favorita, número de comentarios recibidos de los usuarios y las
-etiquetas asignadas
-• Al pasar el ratón por encima de la foto, ésta se destacará de las demás, mediante
-CSS, de alguna forma. Además, al hacer clic en la foto se nos dirigirá a la página
-foto.html para ver toda la información de la foto.
-• El nombre del autor también será un enlace que llevará a la página buscar.html.
-• Las etiquetas serán, a su vez, enlaces que llevarán, también, a la página
-buscar.html.
-• Además, habrá un pie para la paginación de fotos. Deberá tener botones para ir a primera, anterior,
-siguiente y última página. También deberá mostrar la página en la que se encuentra del
-total de páginas.
-Nota: Como esta práctica es estática, se hace clic en la foto, en la página foto.html siempre se verá la
-misma información. Se hace clic en el autor o la etiqueta, la página buscar.htm siempre mostrará la
-misma información.-->
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Animated Login Form</title>
-       
-      
-        <link rel="stylesheet" type="text/css" href="css/buscar.css">
-        <link rel="stylesheet" type="text/css" href="css/index.css">
-        <link rel="stylesheet" type="text/css" href="css/login.css">
-        <link rel="stylesheet" type="text/css" href="css/foto.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link
-            href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap"
-            rel="stylesheet">
-      
-        <link rel="stylesheet"
-            href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-            integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-            crossorigin="anonymous">
-       
+<html lang="en">
 
-    </head>
-    <body>
-      <header>
-        <div class="topnav">
-           
-                    <a href="./index.html"><i class="fas fa-house-user">Inicio</i></a>
-                <a href="./buscar.html"><i class="fas fa-search">Buscar</i></a></li>
-                <a href="./nueva.html"><i class="fas fa-plus-square">Nueva Foto</i></a>
-                <a href="./favoritas.html"><i class="far fa-bookmark">Favoritas</i></a>
-                <a href="./registro.html"><i class="fas fa-registered">Registro</i></a>
-                <a href="./login.html"><i class="fas fa-user">Login</i></a>
-                <a href="./login.html"><i class="fas fa-sign-out-alt">Logout</i></a>
-                </ul>
-            </div>
-        </nav>
-        <div id="header" class="jumbotron">
-            <div class="sta">
-                <div >
-                    <img src="multimedia/logo1.png" class="logo1" alt="logo de
-                        cabecera">
-    
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>jackpiro</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- fevicon -->
+    <link rel="icon" href="images/fevicon.png" type="image/gif" />
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+    <!-- Tweaks for older IEs-->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+</head>
+<!-- body -->
+
+<body class="main-layout">
+    <!-- loader  -->
+    <div class="loader_bg">
+        <div class="loader"><img src="images/loading.gif" alt="#" /></div>
+    </div>
+    <!-- end loader -->
+    <!-- header -->
+    <header>
+        <!-- header inner -->
+        <div class="header-top">
+            <div class="header">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                            <div class="full">
+                                <div class="center-desk">
+                                    <div class="logo">
+                                        <a href="index.html"><img src="images/logo.png" alt="#" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                            
+                                        <ul class="top_icon">
+                                            <li class="button_login"> <a href="#">Login</a> </li>
+                                            <li> <a href="#about">Signup</a> </li>
+                                            <li class="mean-last">
+                                             <a href="#"><img src="images/search_icon.png" alt="#" /></a>
+                                            </li>
+                                        </ul>
+                        </div>
+                    </div>
                 </div>
-                <div >
-                    <h1>Artics Hm</h1>
-                </div>
             </div>
+            <!-- end header inner -->
+
+            <!-- end header -->
+            <section class="slider_section">
+                <div class="banner_main">
+
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-2 padding_left0">
+                                <div class="menu-area">
+                                <div class="limit-box">
+                                    <nav class="main-menu">
+                                        <ul class="menu-area-main">
+                                            <li class="active"> <a href="#game">Game</a> </li>
+                                            <li> <a href="#software">Software</a> </li>
+                                            <li> <a href="#about">About</a> </li>
+                                            <li> <a href="#testimonial">Testimonial</a> </li>
+                                            <li> <a href="#contact">Contact</a> </li>
+                                           
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 ">
+                                <div class="text-bg">
+                                    <h1>amazing<br> 3d game</h1>
+                                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br> tempor incididunt ut</span>
+                                    <a href="#">download</a>
+                                </div>
+                            </div>
+                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 ">
+                                <div class="text-img">
+                                   <figure><img src="images/img.png" alt="#"/></figure>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+        
+           </section>
         </div>
     </header>
 
-    <div class="con" id="resultados" style="overflow-x:auto;">
+    <!-- our -->
+    <div id="games" class="our">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="titlepage">
+                        <h2>Our Games</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 margin_bottom">
+                    <div class="row">
 
-      <table class="table-rwd" width="500"  border-spacing="2px"  cellspacing="1">
-        <tbody >
-            <tr>
-                    <td><table width="550" style="background: #555;" cellspacing="1">
-                      <tbody>
-                        <tr>
-                          <td><table width="273" cellspacing="1">
-                            <tbody>
-                              <tr>
-                                <td>
-                                    <h1>Seon fricks</h1>
-                                    <a href="buscar.html">
-                                        <h2>By Sanchez</h2>
-                                    </a>
-                                </td>
-                              </tr>
-                              <tr>
-                                <ul class="fotos">
-                                    <li>
-                                        <a class=" foto"href="foto.html" >
-                                            <img src="multimedia/amazing-waterfallwww.TheWallpapers.org_.jpg" width="200px" height="250px" class="responsive" alt=""/></td>
-                                        </a>
-                                    </li>
-                                </ul>                       
-                                     </tr>
-                              <tr>
-                                <td>
-                                    <i class="far fa-heart">120</i>
-                                    <i class="fas fa-star">13</i>
-                                    <i class="fas fa-comments">19</i>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    <i class="fas fa-tags"></i>
-                                    <a href="buscar.html">Amor</a>
-                                    <a href="buscar.html">Sol</a>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table></td>
-                          <td><table width="273" style="background: #555;" cellspacing="1">
-                            <tbody>
-                              <tr>
-                                <td>
-                                    <h1>Blues fricks</h1>
-                                    <a href="buscar.html">
-                                        <h2>By Sanchez</h2>
-                                    </a>
-                                </td>
-                              </tr>
-                              <tr>
-                                <ul class="fotos">
-                                    <li>
-                                        <a class=" foto" href="foto.html">
-                                            <img src="multimedia/amblk (3) [1600x1200]-5147.jpeg" width="200px" height="250px" class="responsive" alt=""/></td>
-                                        </a>
-                                    </li>
-                                </ul>                              </tr>
-                              <tr>
-                                <td>
-                                    <i class="far fa-heart">110</i>
-                                    <i class="fas fa-star">15</i>
-                                    <i class="fas fa-comments">1</i>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    <i class="fas fa-tags"></i>
-                                    <a href="buscar.html">Aire</a>
-                                    <a href="buscar.html">Sol</a>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table></td>
-                          <td><table width="273" style="background: #555;" cellspacing="1">
-                            <tbody>
-                              <tr>
-                                <td>
-                                    <h1>Ambar fricks</h1>
-                                    <a href="buscar.html">
-                                        <h2>By Sanchez</h2>
-                                    </a>
-                                </td>
-                              </tr>
-                              <tr>
-                                <ul class="fotos">
-                                    <li>
-                                        <a class=" foto" href="foto.html">
-                                            <img src="multimedia/apple-travel-island-full-hd-background.jpg" width="200px" height="250px" class="responsive" alt=""/></td>
-                                        </a>
-                                    </li>
-                                </ul>                              </tr>
-                              <tr>
-                                <td>
-                                    <i class="far fa-heart">102</i>
-                                    <i class="fas fa-star">18</i>
-                                    <i class="fas fa-comments">1</i>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    <i class="fas fa-tags"></i>
-                                    <a href="buscar.html">Aire</a>
-                                    <a href="buscar.html">Amor</a>
-                                    <a href="buscar.html">Sol</a>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table></td>
-                          <td><table  cellspacing="1" style="background: #555;">
-                            <tbody>
-                              <tr>
-                                <td>
-                                    <h1>Cristal fricks</h1>
-                                    <a href="buscar.html">
-                                        <h2>By Sanchez</h2>
-                                    </a>
-                                </td>
-                              </tr>
-                              <tr>
-                                <ul class="fotos">
-                                    <li>
-                                        <a class=" foto" href="foto.html">
-                                            <img src="multimedia/dabf9bdf.jpg" width="200px" height="250px" class="responsive" alt=""/></td>
-                                        </a>
-                                    </li>
-                                </ul>                              </tr>
-                              <tr>
-                                <td>
-                                    <i class="far fa-heart">145</i>
-                                    <i class="fas fa-star">13</i>
-                                    <i class="fas fa-comments">13</i>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    <i class="fas fa-tags"></i>
-                                    <a href="buscar.html">Aire</a>
-                                    <a href="buscar.html">Amor</a>
-                                    <a href="buscar.html">Sol</a>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table></td>
-                        </tr>
-                        <tr>
-                          <td><table  cellspacing="1" style="background: #555;">
-                            <tbody>
-                              <tr>
-                                <td>
-                                    <h1>Rous fricks</h1>
-                                    <a href="buscar.html">
-                                        <h2>By Sanchez</h2>
-                                    </a>
-                                </td>
-                              </tr>
-                              <tr>
-                                <ul class="fotos">
-                                    <li>
-                                        <a class=" foto" href="foto.html">
-                                            <img src="multimedia/dual_screen_wallpaper_036-324526.jpeg"  width="200px" height="250px" class="responsive" alt=""/></td>
-                                        </a>
-                                    </li>
-                                </ul>                              </tr>
-                              <tr>
-                                <td>
-                                    <i class="far fa-heart">145</i>
-                                    <i class="fas fa-star">133</i>
-                                    <i class="fas fa-comments">131</i>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    <i class="fas fa-tags"></i>
-                                    <a href="buscar.html">Cultura</a>
-                                    <a href="buscar.html">Amor</a>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table></td>
-                          <td><table cellspacing="1" style="background: #555;">
-                            <tbody>
-                              <tr>
-                                <td>
-                                    <h1>Campri fricks</h1>
-                                    <a href="buscar.html">
-                                        <h2>By Sanchez</h2>
-                                    </a>
-                                </td>
-                              </tr>
-                              <tr>
-                                <ul class="fotos">
-                                    <li>
-                                        <a class=" foto" href="foto.html">
-                                            <img src="multimedia/embrace_by_dilekt.jpg" width="200px" height="250px" class="responsive" alt=""/></td>
-                                        </a>
-                                    </li>
-                                </ul>                              </tr>
-                              <tr>
-                                <td>
-                                    <i class="far fa-heart">167</i>
-                                    <i class="fas fa-star">15</i>
-                                    <i class="fas fa-comments">7</i>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    <i class="fas fa-tags"></i>
-                                    <a href="buscar.html">Aire</a>
-                                    <a href="buscar.html">Paz</a>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table></td>
-                          <td><table cellspacing="1" style="background: #555;">
-                                <tbody>
-                                  <tr>
-                                    <td>
-                                        <h1>Cracks fricks</h1>
-                                        <a href="buscar.html">
-                                            <h2>By Sanchez</h2>
-                                        </a>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <ul class="fotos">
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                            <div class="two-box">
+                                <figure><img src="images/our-image1.jpg" alt="#" /></figure>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
+
+                            <div class="Games">
+                                <h3>Angry Birds</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et </p>
+                                <a href="#">Free Download</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 margin_bottom">
+                    <div class="row">
+
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                            <div class="two-box">
+                                <figure><img src="images/our-image2.jpg" alt="#" /></figure>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
+
+                            <div class="Games">
+                                <h3>Sanke</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et </p>
+                                <a href="#">Free Download</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="row">
+
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                            <div class="two-box">
+                                <figure><img src="images/our-image3.jpg" alt="#" /></figure>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
+
+                            <div class="Games">
+                                <h3>Cricket</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et </p>
+                                <a href="#">Free Download</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <!-- end our -->
+    <!-- We are -->
+    <div id="software" class="We_are">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="titlepage">
+                        <h2>Software</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                     <div class="box_bg">
+                         <div class="box_bg_img">
+                             <figure><img src="images/soft.jpg"></figure>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 border_right">
+                     <div class="box_text">
+                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborumLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+                         <a href="#">Read more</a>
+                     </div>
+                 </div> 
+            </div>
+        </div>
+    </div>
+    <!-- end We are -->
+
+    <!-- about  -->
+    <div id="about" class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="titlepage">
+                        <h2>About Our Game</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="about-box">
+                        <figure><img src="images/about.jpg" alt="#" /></figure>
+
+                        <p> consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            <br> labore et dolore magna aliqua. Ut enim conseq</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- end abouts -->
+
+    <!-- testimonial -->
+    <div id="testimonial" class="testimonial">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="titlepage">
+                        <h2>Testimonial</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 offset-md-2">
+                    <div class="row box">
+                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                            <div class="testimonial_box">
+                                <figure><img src="images/test1.png" alt="#" /></figure>
+                            </div>
+                        </div>
+                        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12">
+                            <div class="testimonial_box">
+                                <figure><img src="images/test2.png" alt="#" /></figure>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                            <div class="testimonial_box">
+                                <figure><img src="images/test3.png" alt="#" /></figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clients_box">
+                        <h3>Jecoo</h3>
+                        <p>adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                            <br>aliqua. Ut enim ad minim veniam, quis
+                            <br>nostrud exercitation ullamco</p>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- end testimonial -->
+
+    <!-- contact -->
+    <div id="contact" class="contact">
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-12">
+
+                    <form class="contact_bg">
+                        <div class="row">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                <input class="contactus" placeholder="Name" type="text" name="Name">
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                <input class="contactus" placeholder="Phone" type="text" name="Email">
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                <input class="contactus" placeholder="Email" type="text" name="Email">
+                            </div>
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                <textarea class="textarea" placeholder="Message" type="text" name="Message"></textarea>
+                            </div>
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                <button class="send">Send</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+   
+    <!-- end contact -->
+
+    <!--  footer -->
+    <footr>
+        <div class="footer ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Newsletter</h2>
+                    </div>
+                    <div class="col-md-10 offset-md-1">
+                        <form class="news">
+                            <input class="newslatter" placeholder="Enter Your Email" type="text" name="Enter Your Email">
+                            <button class="submit">Subscribe</button>
+                        </form>
+                    </div>
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 ">
+                        <div class="row">
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 ">
+                                <div class="address">
+                                    <ul class="social_link">
+                                        <li><a href="#"><img src="icon/fb.png"></a></li>
+                                        <li><a href="#"><img src="icon/tw.png"></a></li>
+                                        <li><a href="#"><img src="icon/lin(2).png"></a></li>
+                                         <li><a href="#"><img src="icon/instagram.png"></a></li>
+                                    </ul>
+                                    <a href="index.html"> <img src="images/logo.png" alt="logo"></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                                <div class="address">
+                                    <h3>Quick links</h3>
+                                    <ul class="Menu_footer">
+                                        <li class="active"> <img src="images/3.png" alt="#"> <a href="#game">Game</a> </li>
+                                        <li><img src="images/3.png" alt="#"> <a href="#software">Software</a> </li>
+                                        <li><img src="images/3.png" alt="#"> <a href="#about">About</a> </li>
+                                        <li><img src="images/3.png" alt="#"> <a href="#testimonial"> Testimonial</a> </li>
+                                        <li><img src="images/3.png" alt="#"> <a href="#contact">Contact</a> </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                                <div class="address">
+                                    <h3>downloded</h3>
+                                    <ul class="Links_footer">
+                                        <li class="active"><img src="images/3.png" alt="#"> <a href="#">Lorem Ipsum </a> </li>
+                                        <li><img src="images/3.png" alt="#"> <a href="#">Simply random</a> </li>
+                                        <li><img src="images/3.png" alt="#"> <a href="#">Roots in a</a> </li>
+                                        <li><img src="images/3.png" alt="#"> <a href="#"> Piece</a> </li>
+                                        <li><img src="images/3.png" alt="#"> <a href="#">Classical</a> </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-6 col-sm-6 ">
+                                <div class="address">
+                                    <h3>Contact us </h3>
+                                    <ul class="loca">
                                         <li>
-                                            <a class=" foto" href="foto.html">
-                                                <img src="multimedia/fondos_naturales_342-1920x1080.jpg" width="200px" height="250px" class="responsive" alt=""/></td>
-                                            </a>
-                                        </li>
-                                    </ul>                            
-                                  </tr>
-                                  <tr>
-                                    <td>
-                                        <i class="far fa-heart">189</i>
-                                        <i class="fas fa-star">3</i>
-                                        <i class="fas fa-comments">9</i>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>
-                                        <i class="fas fa-tags"></i>
-                                        <a href="buscar.html">Aire</a>
-                                        <a href="buscar.html">Amor</a>
-                                    </td>
-                                  </tr>
-                                </tbody>
-                              </table>                              </td>
-                          <td><table  cellspacing="1" style="background: #555;">
-                            <tbody>
-                              <tr>
-                                <td>
-                                    <h1>Cruz fricks</h1>
-                                    <a href="buscar.html">
-                                        <h2>By Sanchez</h2>
-                                    </a>
-                                </td>
-                              </tr>
-                              <tr>
-                                <ul class="fotos">
-                                    <li>
-                                        <a class=" foto" href="foto.html">
-                                            <img src="multimedia/fondos_naturales_342-1920x1080.jpg" width="200px" height="250px" class="responsive" alt=""/></td>
-                                        </a>
-                                    </li>
-                                </ul>                            
-                              </tr>
-                              <tr>
-                                <td>
-                                    <i class="far fa-heart">190</i>
-                                    <i class="fas fa-star">19</i>
-                                    <i class="fas fa-comments">5</i>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    <i class="fas fa-tags"></i>
-                                    <a href="buscar.html">Silencio</a>
-                                    <a href="buscar.html">Amor</a>
-                                    <a href="buscar.html">Paz</a>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table></td>
-            </tr>                        
-          </tbody>
-        </table>
-              
-      </div>
+                                            <a href="#"><img src="icon/loc.png" alt="#" /></a>London 145
+                                            <br>United Kingdom </li>
+                                        <li>
+                                            <a href="#"><img src="icon/email.png" alt="#" /></a>demo@gmail.com </li>
+                                        <li>
+                                            <a href="#"><img src="icon/call.png" alt="#" /></a>+12586954775 </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-      <div class="pagination">
-        <a href="#">&laquo;</a>
-        <a href="#">1</a>
-        <a href="#">2</a>
-        <a href="#">3</a>
-        <a href="#">4</a>
-        <a href="#">5</a>
-        <a href="#">6</a>
-        <a href="#">&raquo;</a>
-      </div>
-    <footer>
-      <div class="container-fluid">
+                </div>
 
-        <a class="small" href="acerca.html">Autor: Byron
-          Herrera</a>
-        <a class="small" href="#">&copy; 2020-Todos los derechos reservados</a>
-      </div>
-    </footer>
-    </body>
+            </div>
+            <div class="copyright">
+                <div class="container">
+                    <p>© 2019 All Rights Reserved. <a href="https://html.design/">Free html Templates</a></p>
+                </div>
+            </div>
+        </div>
+    </footr>
+    <!-- end footer -->
+    <!-- Javascript files-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/plugin.js"></script>
+    <!-- sidebar -->
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+
+</body>
+
 </html>
